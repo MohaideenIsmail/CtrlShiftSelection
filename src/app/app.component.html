@@ -1,0 +1,39 @@
+<div class="bg-light app-style">
+
+    <main role="main" class="container-fluid">
+        <div class="d-flex align-items-center p-3 my-3 bg-purple rounded shadow-sm">
+            <div class="lh-100">
+                <h3 class="mb-0 lh-100">Shift / Ctrl Key Selections </h3>
+            </div>
+        </div>
+        <div class="row col-md-12">
+
+            <div class="bg-white rounded shadow-sm col-md-6">
+                <h6 class="border-bottom border-gray pb-2 mb-0">Source</h6>
+
+                <ul class="list-group source-ul">
+                    <li class="list-group-item" *ngFor="let source of dataObj.source.available; let i = index" (click)="onClickOnSource(i, $event, source)" [ngClass]="{'highlight-row': getHighlightedSource(source)}">
+                        {{source.name}}
+                    </li>
+                </ul>
+                <div class="height-10px"></div>
+                <span>* Duplicates are not allowed</span>
+            </div>
+            <div class="col-md-1 add-btn" [ngClass]="{'disabled-btn': dataObj.source.selected.length == 0}">
+                <span (click)="onClickOnAddBtn()"> > </span>
+            </div>
+            <div class="bg-white rounded shadow-sm col-md-5">
+                <h6 class="border-bottom border-gray pb-2 mb-0">Destination</h6>
+                <ul class="list-group destination-ul">
+                    <li class="list-group-item" *ngFor="let destination of dataObj.destination.available">
+                        {{destination.name}}
+                    </li>
+                </ul>
+                <div class="height-10px"></div>
+                <button class="btn btn-warning pull-right" (click)="removeAllOnDestination()">Remove All</button>
+                <div class="height-10px"></div>
+            </div>
+        </div>
+    </main>
+
+</div>

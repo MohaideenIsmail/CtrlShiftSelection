@@ -1,0 +1,47 @@
+.app-style {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    .source-ul {
+        height: 400px;
+        overflow-y: auto;
+        cursor: pointer;
+        border: solid 1px #ddd;
+    }
+    .destination-ul {
+        height: 400px;
+        overflow-y: auto;
+        cursor: pointer;
+        border: solid 1px #ddd;
+    }
+    .highlight-row {
+        background: #b7e4ff !important;
+    }
+    .add-btn {
+        margin: auto auto;
+        text-align: center;
+        span {
+            background: #716f6f;
+            color: #fff;
+            padding: 0 10px;
+            font-size: 40px;
+            height: 70px;
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+    .disabled-btn {
+        span {
+            background: #ddd;
+            pointer-events: none;
+        }
+    }
+    .height-10px {
+        height: 10px;
+        display: inline-block;
+        width: 100%;
+    }
+}
